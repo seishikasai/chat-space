@@ -32,15 +32,16 @@ Things you may want to cover:
 |username|string|null: false|
 ### Association
 - has_many :messages
+- has_many :groups_users
 - has_many :groups, through: :groups_users
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
-|image|string|null: false|
+|body|text| |
+|image|string| |
 |group_id|integer|null: false, forein_key: true|
-|user_id|integer|null: forein_key: true|
+|user_id|integer|null: false, forein_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
@@ -48,9 +49,10 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, forein_key: true|
+|groupname|integer|null: false, forein_key: true|
 ### Association
 - has_many :messages
+- has_many :groups_users
 - has_many :groups, through: :groups_users
 ## groups_usersテーブル
 
