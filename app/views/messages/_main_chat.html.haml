@@ -1,0 +1,32 @@
+.wrapper2
+  .header
+    .header__first
+      %h2.header__first__user
+        sample
+      %ul.header__first__member
+        join-user
+    = link_to "#", class: "header__second-btn" do
+      .header__second
+        %span Edit
+  .contents
+    .contents__message
+      .contents__message__user
+        .contents__message__user__name
+          %p test-user
+        .contents__message__user__date
+          %p 日付
+      .contents__message__text
+        %p おはよう
+  .form
+    .send-box
+      .input-box
+        .input-box__text
+          %input{class: "input-box__text", placeholder: "type a message"}
+        .input-box__image
+          %label{class: "input-box__image"}
+            = icon('fas', 'image')
+            %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn",  value: "Send"}
+          
+ 
+    
