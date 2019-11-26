@@ -1,11 +1,11 @@
 .wrapper1
   .sidebar
     .sidebar__name
-      seo
+      = current_user.name
     .sidebar__mark
       =link_to "#", class: "sidebar__btn" do
         = icon('fas', 'edit')
-      =link_to "#", class: "sidebar__btn" do
+      =link_to edit_user_path(current_user), class: "sidebar__btn" do
         = icon('fas', 'cog')
   .sidebar-contents
     .group
