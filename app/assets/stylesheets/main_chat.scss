@@ -20,8 +20,13 @@
     }
 
     &__member {
+      display: flex;
       font-size: 12px;
       color: #999999;
+
+      &__list {
+        list-style: none;
+      }
     }
   }
 

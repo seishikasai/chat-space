@@ -2,10 +2,13 @@
   .header
     .header__first
       %h2.header__first__user
-        sample
+        = @group.name
       %ul.header__first__member
-        join-user
-    = link_to "#", class: "header__second-btn" do
+        Member : 
+        %li.header__first__member__list
+          - @group.group_users.each do |group_user|
+            = group_user.user.name
+    = link_to edit_group_path(@group), class: "header__second-btn" do
       .header__second
         %span Edit
   .contents
