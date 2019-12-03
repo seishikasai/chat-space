@@ -1,6 +1,10 @@
 $(function(){
   function buildHTML(message){
     if (message.image.url) {
+      var img = `<img src=${message.image.url} width = 200 height = 150 >`
+      } else {
+      var img = ``
+      }
       var html =`<div class="contents__message">
                    <div class="contents__message__user">
                      <div class="contents__message__user__name">
@@ -14,25 +18,8 @@ $(function(){
                      <p class="contents__message__text__content">
                        ${message.content}
                      </p>
-                       <img src="${message.image.url}" width="200" height"180">
+                       ${img}
                  </div>`
-    } else {
-      var html =`<div class="contents__message">
-                   <div class="contents__message__user">
-                     <div class="contents__message__user__name">
-                       ${message.user_name}
-                     </div>
-                     <div class="contents__message__user__date">
-                       ${message.date}
-                     </div>
-                   </div>
-                   <div class="contents__message__text">
-                     <p class="contents__message__text__content">
-                       ${message.content}
-                     </p>
-                   </div>
-                 </div>`  
-    }
     return html;
   }
 
