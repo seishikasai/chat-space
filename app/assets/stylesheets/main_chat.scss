@@ -44,6 +44,7 @@
 .contents {
   padding: 46px 40px;
   height: calc(100vh - 190px);
+  overflow: auto;
   
   &__message {
     padding-bottom: 40px;
@@ -69,6 +70,10 @@
         color: #434a54;
         font-size: 14px;
         margin-bottom: 10px;
+
+      &__image {
+        width: 200px;
+      }
     }
   
   }
