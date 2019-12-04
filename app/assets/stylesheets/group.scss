@@ -60,7 +60,7 @@ li {
     border: 0;
   }
   &__field {
-    margin-top: 30px;
+    margin-top: 15px;
     &:after {
       content: "";
       clear: both;
@@ -76,6 +76,7 @@ li {
     &--right {
       float: right;
       width: 70%;
+      padding-top: 15px;
     }
   }
 }
@@ -105,3 +106,4 @@ li {
     }
   }
 }
+
