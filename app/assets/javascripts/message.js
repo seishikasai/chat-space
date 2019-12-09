@@ -2,7 +2,7 @@ $(function(){
 
   function buildHTML(message){
     if (message.image) {
-      var img = `<img src=${message.image.url} width = 200 height = 150 >`
+      var img = `<img src="${message.image}" width = 200 height = 150 >`
       } else {
       var img = ``
       }
@@ -53,7 +53,6 @@ $(function(){
 
     var reloadMessages = function() {
       if (window.location.href.match(/\/groups\/\d+\/messages/)){
-
       last_message_id = $('.contents__message:last').data('message_id');
       $.ajax({
         url: "api/messages",
